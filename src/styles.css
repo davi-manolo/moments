@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+    transition: 4s;
+}
+
+a:hover {
+    color: #dec129;
+}
+
+/* Estilo global do formulário*/
+form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: .4em;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: .6em;
+    color: #777;
+    font-size: .8em;
+}
+
+input[type="submit"] {
+    background-color: #efefef;
+    border: 2px solid transparent;
+    padding: 0.6em 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+    color: #dec129;
+    border-color: #dec129;
+    background-color: transparent;
+}
+
+.validation-error p {
+    color: #dc3545;
+    margin-top: .4em;
+    padding-left: 0.2em;
+}
