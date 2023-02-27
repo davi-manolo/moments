@@ -4,8 +4,8 @@ export interface Moments {
   title: string;
   description: string;
   image: string;
-  createdAt?: string;
-  updatedAt?: string;
-  commets?: [{username: string, text: string}];
+  created_at?: string;
+  updated_at?: string;
+  comments?: [{username: string, text: string}];
 
 }

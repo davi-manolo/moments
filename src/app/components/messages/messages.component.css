@@ -1,0 +1,39 @@
+.message {
+  position: fixed;
+  top: 3em;
+  width: 50%;
+  margin-left: 50%;
+  left: -25%;
+  z-index: 10;
+  background-color: #fff;
+  border: 3px solid #dec129;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: .5em;
+  }
+  
+  .message-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1em;
+  }
+  
+  .message-header button {
+      padding: 0.5em;
+      width: 2em;
+      height: 2em;
+      cursor: pointer;
+      background-color: #dec129;
+      border: none;
+      border-radius: 0.5em;
+  }
+
+  .message-header button:hover {
+    background-color: #b59c21;
+}
+  
+  .message-header p {
+      font-size: 1.2em;
+  }
