@@ -14,18 +14,24 @@ export class HomeComponent implements OnInit {
   allMoments: Moments[] = [];
   filterMoments: Moments[] = [];
   baseApiUrl = environment.baseApiUrl;
-
-  //TODO: Search
+  faSearch = faSearch;
+  searchTerm: string = '';
 
   constructor(private momentsService: MomentsService) {}
 
   ngOnInit(): void {
       this.momentsService.getAllMoments().subscribe(items => {
         const data = items.data;
-        data.map(item => item.created_at = new Date(item.created_at!).toLocaleDateString('pt-BR'));
+        data.forEach(item => item.created_at = new Date(item.created_at!).toLocaleDateString('pt-BR'));
         this.allMoments = data;
         this.filterMoments = data;
       });
+  }
+
+  search(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    const value = target.value;
+    this.allMoments = this.filterMoments.filter(moment => moment.title.toLowerCase().includes(value.toLowerCase()));
   }
 
 }

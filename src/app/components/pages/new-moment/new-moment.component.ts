@@ -26,7 +26,7 @@ export class NewMomentComponent {
     if(moment.image) {
       formData.append('image', moment.image);
     }
-    this.momentsService.createMoment(formData).subscribe();
+    await this.momentsService.createMoment(formData).subscribe();
     this.messageService.add('Momento registrado com sucesso!');
     this.router.navigate(['/']);
   }
